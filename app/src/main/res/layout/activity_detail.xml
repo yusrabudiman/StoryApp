@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.page.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/user_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/detail_user_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="680dp"
+            android:scaleType="fitCenter"
+            android:transitionName="image"
+            tools:srcCompat="@tools:sample/avatars"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:transitionName="name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_image"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints,RtlSymmetry"
+            tools:layout_editor_absoluteX="16dp"
+            tools:text="@string/username" />
+
+        <TextView
+            android:id="@+id/desc_list_story"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:ellipsize="end"
+            android:maxLines="20"
+            android:lineSpacingExtra="4dp"
+            android:hint="@string/desc_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
+        <TextView
+            android:id="@+id/date_picker_actions_post"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:hint="@string/date_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desc_list_story"
+            android:textSize="16sp"
+            android:paddingBottom="20dp"
+            tools:ignore="RtlSymmetry" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

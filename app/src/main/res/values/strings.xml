@@ -72,4 +72,5 @@
     <string name="lokasi_dinonaktifkan">Lokasi dinonaktifkan</string>
     <string name="lokasi_tidak_tersedia">Lokasi tidak tersedia</string>
     <string name="lokasi_diaktifkan">lokasi diaktifkan</string>
+    <string name="image_view">Image View</string>
 </resources>

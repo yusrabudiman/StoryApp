@@ -12,8 +12,11 @@ const val BASE_URL = BuildConfig.BASE_URL
 class ApiConfig {
     companion object{
         fun getApiService(token: String): ApiService {
-            val loggingInterceptor = HttpLoggingInterceptor()
-                .setLevel(HttpLoggingInterceptor.Level.BODY)
+            val loggingInterceptor =
+                if(BuildConfig.DEBUG) { HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY) }
+            else {
+                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
+            }
             val authInterceptor = Interceptor {chain ->
                 val request = chain.request()
                 val requestHead = request.newBuilder()

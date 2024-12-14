@@ -157,7 +157,6 @@ class CameraxActivity : AppCompatActivity() {
         orientationEventListener.disable()
     }
     companion object{
-        private const val TAG = "CameraActivity"
         const val EXTRA_CAMERAX_IMAGE = "Camerax Image"
         const val CAMERAX_RESULT = 200
     }

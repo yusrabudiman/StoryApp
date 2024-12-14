@@ -84,7 +84,7 @@ class CameraxActivity : AppCompatActivity() {
                     imgCapture
                 )
             } catch (exception: Exception) {
-                handleCameraError(exception)
+                handleCameraError()
             }
         }, ContextCompat.getMainExecutor(this))
     }
@@ -94,7 +94,7 @@ class CameraxActivity : AppCompatActivity() {
             .build()
             .also { it.surfaceProvider = binding.cameraView.surfaceProvider }
     }
-    private fun handleCameraError(exception: Exception) {
+    private fun handleCameraError() {
         Toast.makeText(
             this@CameraxActivity,
             getString(R.string.gagal_memunculkan_kamera),
